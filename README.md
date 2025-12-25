@@ -63,7 +63,6 @@ CREATE TABLE users (
 INSERT INTO users (username, password, full_name) 
 VALUES ('admin', 'admin123', 'Administrator');
 ```
-Alternatively, import the provided `database.sql` file.
 
 ### 3. Configure Database Connection
 Update the database connection settings in `login.php`:
