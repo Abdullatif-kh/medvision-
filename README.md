@@ -1,6 +1,8 @@
 # MedVision
 AI-Powered Medical Image Analysis System
 
+🌐 **[Live Demo](https://medvision-ai.wuaze.com/login.php)** | Default credentials: `admin` / `admin`
+
 ## Overview
 MedVision is a web-based medical image analysis platform designed to assist in detecting medical conditions using artificial intelligence. The system supports three types of medical scans:
 * **Brain Tumor Detection** - MRI scan analysis for brain tumors
@@ -30,6 +32,16 @@ This project was developed as part of a study on AI applications in healthcare d
 * **Database:** MySQL
 * **Server:** Apache (XAMPP)
 
+## Live Demo
+
+🚀 **Try it now:** [https://medvision-ai.wuaze.com/login.php](https://medvision-ai.wuaze.com/login.php)
+
+**Demo Credentials:**
+```
+Username: admin
+Password: admin
+```
+
 ## Prerequisites
 Before running this project, ensure you have:
 * XAMPP (or any Apache + MySQL + PHP environment)
@@ -40,14 +52,14 @@ Before running this project, ensure you have:
 ## Installation
 
 ### 1. Clone the Repository
-```
+```bash
 git clone https://github.com/your-username/medvision.git
 cd medvision
 ```
 
 ### 2. Database Setup
 Open phpMyAdmin and execute the following SQL:
-```
+```sql
 CREATE DATABASE medvision;
 USE medvision;
 
@@ -61,12 +73,14 @@ CREATE TABLE users (
 
 -- Insert demo user
 INSERT INTO users (username, password, full_name) 
-VALUES ('admin', 'admin123', 'Administrator');
+VALUES ('admin', 'admin', 'Administrator');
 ```
+
+Alternatively, import the provided `database.sql` file.
 
 ### 3. Configure Database Connection
 Update the database connection settings in `login.php`:
-```
+```php
 $conn = new PDO("mysql:host=localhost;port=3307;dbname=medvision", "root", "");
 ```
 Adjust the port number based on your XAMPP configuration (typically 3306 or 3307).
@@ -82,12 +96,6 @@ C:\xampp\htdocs\medvision\
 2. Start Apache and MySQL services
 3. Open your browser and navigate to: `http://localhost/medvision/`
 
-## Demo Credentials
-```
-Username: admin
-Password: admin123
-```
-
 ## Project Structure
 ```
 medvision/
@@ -99,7 +107,6 @@ medvision/
 ├── contact.php        # Contact page
 ├── script.js          # JavaScript functionality
 ├── style.css          # Stylesheet
-├── database.sql       # Database schema
 └── images/            # Images and icons
 ```
 
@@ -123,4 +130,4 @@ This is a **demonstration version** of the MedVision system. The current impleme
 
 ---
 
-**Developed By Medvison Team | 2025**
+**Developed By MedVision Team | 2025**
